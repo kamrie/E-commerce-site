@@ -1,0 +1,195 @@
+/* changing default settings of the browser */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+/*  */
+.navbar{
+    background:linear-gradient( rgba(23, 16, 16, 2),  rgba(249, 11, 11, 0.8));
+    color:#fff;
+    padding: 25px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    /* overflow-x: hidden; */
+}
+
+body{
+    background-color: rgba(204, 204, 204, 0.4);
+    padding-bottom: 40px;
+}
+
+i{
+    cursor: pointer;
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.cart{
+    position: relative;
+    background-color: white;
+    color: black;
+    font-size:25px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.cartAmount{
+    position: absolute;
+    top: -12px;
+    right:-9px;
+    /* top: 12px;      I got the result by applying only position absolute but
+                         i can just give the parent A RELATIVE POSITION and give this ones 0px
+    right: 49px; */
+   background-color: red;
+   font-size: 17px;
+   color: white;
+   padding:2px;
+   border-radius: 10px;
+}
+
+/* shop item styles */
+.shop{
+    display: grid;
+    grid-template-columns: repeat(4, 239px);
+    gap: 20px;
+    justify-content: center;
+}
+
+.item{
+    border: 2px solid  black;
+    border-radius: 6px;
+}
+.details{
+    display: flex ;
+    flex-direction: column;
+    padding: 10px;
+    gap: 15px;
+}
+.price-quantity{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.buttons{
+    display: flex;
+    gap: 10px;
+    font-size: 17px;
+}
+.bi-dash-lg{
+    color: red;
+}
+
+.bi-plus-lg{
+    color: green;
+}
+
+
+@media(max-width:700px){
+    .shop{
+        display: grid;
+         grid-template-columns: repeat(1, 269px);   /* i can use 239pc 0r 0.5fr...check it out */
+    }
+
+    .item{
+        border: 2px solid  black;
+        border-radius: 6px;
+    }
+}
+
+
+/* styling for labels */
+.text-center{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+.HomeBtn{
+    background: linear-gradient(rgba(23, 16, 16, 2),  rgba(249, 11, 11, 0.8));
+    color: #fff;
+    border: none;
+    padding: 8px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 11px ;
+
+}
+
+.checkout{
+    background-color: green;
+    color: #fff;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+
+}
+
+.clearCart{
+    background-color: red;
+    color: #fff;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+
+}
+
+
+.bi-x-lg{
+    color: red;
+    font-weight: bold;
+}
+
+
+/* styling for shopping cart */
+.shopping-cart{
+  display: grid;
+  grid-template-columns: repeat(1, 590px);
+    /* width: 100%; */
+    justify-content: center;
+    gap: 90px;
+
+}
+
+
+/* styling for cart-item */
+
+.cart-item{
+    border: 2px solid rgb(0, 101, 44);
+    /* color: rgb(175, 47, 47); */
+    border-radius: 9px ;
+    box-shadow: 2px 3px 26px 1px;
+        display: flex;
+
+}
+
+.title-price-x{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* border: 2px solid red; */
+    width: 169%;
+}
+
+
+.title-price{
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+.card-item-price{
+    background: linear-gradient(rgba(23,16, 16, 2),  rgba(249, 11, 11, 0.8));
+    color: white;
+    padding: 8px;
+    border-radius: 9px;
+}
